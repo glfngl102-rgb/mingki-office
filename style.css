@@ -1369,6 +1369,7 @@ main { min-height: 60vh; }
   .pin { font-size: .7rem; padding: 6px 11px 6px 9px; }
   .sheet-backdrop { align-items: center; padding: 24px; }
   .sheet { border-radius: 24px; border-bottom: 1px solid var(--line); }
+  .sheet-grab { display: none; }
 }
 
 @media (min-width: 900px) {
