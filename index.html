@@ -177,11 +177,52 @@
       </div>
 
       <div class="board-meta">
-        <span class="board-count">진행 중 6개</span>
+        <span class="board-count">진행 중 7개</span>
         <span class="board-date" id="boardDate"></span>
       </div>
 
       <div class="board">
+
+        <article class="pcard pcard--lav">
+          <header class="pcard-top">
+            <span class="pcard-emoji" aria-hidden="true">✏️</span>
+            <div class="pcard-title">
+              <h3>캐릭터 이모티콘 4종</h3>
+              <p>직접 그린 캐릭터 4종</p>
+            </div>
+            <span class="status status--go">샘플 완료</span>
+          </header>
+
+          <ul class="et-list" id="etList">
+            <li>
+              <span class="et-face et-face--pink" aria-hidden="true">🐰</span>
+              <span class="et-body"><strong>토끼</strong><span>네이버 OGQ · 블로그 포스팅용</span></span>
+              <span class="et-count"><b>6</b> / 24컷</span>
+            </li>
+            <li>
+              <span class="et-face et-face--amber" aria-hidden="true">🎀</span>
+              <span class="et-body"><strong>모모</strong><span>네이버 OGQ · 일상·공감 스티커</span></span>
+              <span class="et-count"><b>6</b> / 24컷</span>
+            </li>
+            <li>
+              <span class="et-face et-face--sky" aria-hidden="true">👧</span>
+              <span class="et-body"><strong>루루</strong><span>카톡 리액션 · 버럭·씩씩</span></span>
+              <span class="et-count"><b>6</b> / 32컷</span>
+            </li>
+            <li>
+              <span class="et-face et-face--green" aria-hidden="true">👀</span>
+              <span class="et-body"><strong>빼꼼이</strong><span>카톡 리액션 · 벽 뒤 빼꼼</span></span>
+              <span class="et-count"><b>6</b> / 32컷</span>
+            </li>
+          </ul>
+
+          <p class="et-note">상태 확인 후 채팅으로 “토끼 24컷 이어서 해줘”처럼 지시하면 바로 이어서 만들어요.</p>
+
+          <footer class="pcard-foot">
+            <span class="tag tag--go">풀세트 대기</span>
+            <a class="mini-link" href="#panel-office" data-open="design">공방 보기 →</a>
+          </footer>
+        </article>
 
         <article class="pcard pcard--sage">
           <header class="pcard-top">
@@ -295,7 +336,7 @@
           </header>
           <ul class="pcard-list">
             <li class="wait">전자책 298쪽 PDF 검토 대기</li>
-            <li class="wait">이모티콘 샘플 검토 대기</li>
+            <li class="done">이모티콘 4종 샘플 6컷씩 완료 — 풀세트 대기</li>
             <li class="wait">인스타 썸툰·골프툰 샘플 검토 대기</li>
           </ul>
           <footer class="pcard-foot">
@@ -423,6 +464,7 @@
             <button class="chip" type="button" data-todo="구디백 소량 테스트 결정">구디백 소량 테스트 결정</button>
             <button class="chip" type="button" data-todo="오사카 항공 특가 확인">오사카 항공 특가 확인</button>
             <button class="chip" type="button" data-todo="다음 맛집 회차 글감 정리">다음 맛집 회차 글감 정리</button>
+            <button class="chip" type="button" data-todo="이모티콘 4종 풀세트 제작 지시">이모티콘 4종 풀세트 제작 지시</button>
           </div>
         </div>
 
@@ -455,6 +497,7 @@
     <div class="sheet-body">
       <p class="sheet-desc" id="sheetDesc"></p>
       <ul class="sheet-list" id="sheetList"></ul>
+      <div class="et-sheet" id="sheetEt" hidden></div>
       <div class="sheet-actions" id="sheetActions"></div>
     </div>
   </div>

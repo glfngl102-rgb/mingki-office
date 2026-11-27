@@ -145,10 +145,11 @@
       status: '심사 20',
       statusType: 'wait',
       avatar: '🐻',
-      desc: '파스텔 작업대와 미싱이 있는 공방. 미리캔버스 요소를 만들고 구디백 샘플을 재보는 곳이에요.',
+      desc: '파스텔 작업대와 미싱이 있는 공방. 미리캔버스 요소를 만들고, 직접 그린 캐릭터로 이모티콘을 뽑고, 구디백 샘플을 재보는 곳이에요.',
+      reportLead: '이모티콘 4종 샘플 6컷씩 완료 — 풀세트 대기',
+      emoticons: true,
       items: [
-        '미리캔버스 손그림 20종 심사 대기 중',
-        '캐릭터 27종 제출 예정',
+        '미리캔버스 손그림 20종 심사 대기 중 · 캐릭터 27종 제출 예정',
         '구디백 v2 구성 확정 — 볼마커 · 볼타월 · 티 · 파우치',
         '단가표 완료, 소량 테스트 결정 대기'
       ],
@@ -251,7 +252,8 @@
   if (reportList) {
     reportList.innerHTML = PART_ORDER.map((key) => {
       const p = PARTS[key];
-      const lines = (p.items || []).slice(0, 3);
+      const lead = p.reportLead ? [p.reportLead] : [];
+      const lines = lead.concat(p.items || []).slice(0, 3);
       return '<button class="report-card" type="button" data-part="' + key + '">' +
         '<span class="report-top">' +
           '<span class="part-avatar part-avatar--' + p.tone + '" aria-hidden="true">' + p.avatar + '</span>' +
@@ -270,6 +272,7 @@
   const sheetEmoji = $('#sheetEmoji');
   const sheetDesc = $('#sheetDesc');
   const sheetList = $('#sheetList');
+  const sheetEt = $('#sheetEt');
   const sheetActions = $('#sheetActions');
   const sheetClose = $('#sheetClose');
   let lastFocus = null;
@@ -287,6 +290,20 @@
     sheetSub.textContent = p.sub;
     sheetDesc.textContent = p.desc;
     sheetList.innerHTML = items.map((item) => '<li>' + item + '</li>').join('');
+
+    if (sheetEt) {
+      const etSrc = $('#etList');
+      if (p.emoticons && etSrc) {
+        sheetEt.innerHTML =
+          '<div class="et-head"><strong>캐릭터 이모티콘 4종</strong><span>샘플 6컷씩 완료 · 풀세트 대기</span></div>' +
+          '<ul class="et-list">' + etSrc.innerHTML + '</ul>' +
+          '<p class="et-note">상태 확인 후 채팅으로 “토끼 24컷 이어서 해줘”처럼 지시하면 바로 이어서 만들어요.</p>';
+        sheetEt.hidden = false;
+      } else {
+        sheetEt.innerHTML = '';
+        sheetEt.hidden = true;
+      }
+    }
     sheetActions.innerHTML = (p.actions || []).map((a) => {
       if (a.type === 'link') {
         return '<a href="' + a.href + '" target="_blank" rel="noopener">' + a.label + '</a>';

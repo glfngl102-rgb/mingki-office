@@ -882,6 +882,108 @@ main { min-height: 60vh; }
 }
 .mini-link:hover { text-decoration: underline; }
 
+/* ───────────── 캐릭터 이모티콘 현황 ───────────── */
+.et-list { display: grid; gap: 6px; }
+.et-list li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 7px 9px;
+  border-radius: var(--radius-sm);
+  background: var(--cream);
+  border: 1px solid var(--line-soft);
+}
+.et-face {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 27px; height: 27px;
+  border-radius: 9px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  font-size: .9rem;
+  line-height: 1;
+}
+.et-face--pink  { background: var(--pink-tint); }
+.et-face--amber { background: var(--amber-tint); }
+.et-face--sky   { background: var(--sky-tint); }
+.et-face--green { background: var(--green-tint); }
+
+.et-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+  gap: 1px;
+  text-align: left;
+}
+.et-body strong {
+  font-size: .79rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: #241F1A;
+  line-height: 1.3;
+}
+.et-body span {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: .67rem;
+  color: var(--muted);
+  letter-spacing: -.01em;
+  line-height: 1.35;
+  overflow: hidden;
+  word-break: keep-all;
+}
+
+.et-count {
+  flex: none;
+  padding: 3px 8px;
+  border-radius: 100px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-size: .63rem;
+  font-weight: 700;
+  color: #8A8075;
+  letter-spacing: -.01em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.et-count b { color: var(--green-deep); font-weight: 900; }
+
+.et-note {
+  margin-top: 9px;
+  font-size: .69rem;
+  line-height: 1.5;
+  color: var(--muted);
+  letter-spacing: -.015em;
+  word-break: keep-all;
+}
+
+.et-sheet[hidden] { display: none; }
+.et-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 15px 0 7px;
+  padding-top: 13px;
+  border-top: 1px dashed var(--line);
+}
+.et-head strong {
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  color: #241F1A;
+}
+.et-head span {
+  flex: none;
+  font-size: .67rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: -.01em;
+}
+
 /* ───────────── 현황 ───────────── */
 .stat-strip {
   display: grid;

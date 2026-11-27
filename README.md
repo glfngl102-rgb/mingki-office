@@ -32,7 +32,7 @@ assets/
 |---|---|
 | Office | 3D miniature map · 5 room pins (tap for details) · character bubbles · `Motion ON/OFF` toggle · 5 status rows |
 | Meeting room | today's 3 agenda items + per-part reports |
-| Workroom | 6 project cards (published / draft / in review / waiting on a decision) · travel D-day counter |
+| Workroom | 7 project cards (published / draft / in review / waiting on a decision), including a 4-character emoticon sample tracker · travel D-day counter |
 | Status | counts + channel shortcuts |
 | Memo | quick memo + today's checklist, saved in browser `localStorage` |
 
