@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>밍끼 오피스</title>
-<meta name="description" content="밍끼프로 전용 오피스 — 골프 스튜디오실, 블로그 작업실, 디자인 공방, 오사카 라운지를 한 화면에.">
-<meta name="theme-color" content="#FAF6F0">
+<meta name="robots" content="noindex, nofollow">
+<title>Mingki Office · 밍끼 오피스</title>
+<meta name="description" content="밍끼프로 본부 — 지휘실, 골프 스튜디오, 블로그·클립실, 디자인·굿즈, 오사카 라운지를 한 화면에.">
+<meta name="theme-color" content="#F7F3EC">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon-192.png">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
@@ -20,159 +21,163 @@
 <div class="app">
 
   <header class="app-header">
-    <div class="header-top">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 40 40" width="40" height="40">
-            <rect x="3" y="3" width="34" height="34" rx="11" fill="#A9D6EA"/>
-            <rect x="11" y="11" width="18" height="18" rx="7" fill="#FFFDF9"/>
-            <circle cx="16.5" cy="19.5" r="1.7" fill="#4A423B"/>
-            <circle cx="23.5" cy="19.5" r="1.7" fill="#4A423B"/>
-            <path d="M17.6 23.4c1.4 1.3 3.4 1.3 4.8 0" stroke="#4A423B" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          </svg>
-        </span>
-        <div class="brand-text">
-          <h1>밍끼 오피스</h1>
-          <p>밍끼프로 전용 · 망두 대기 중</p>
-        </div>
-      </div>
-      <div class="clock" aria-live="off">
-        <span class="clock-dot" aria-hidden="true"></span>
-        <span id="clockText">--:--:--</span>
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="48" height="48">
+          <rect x="0" y="0" width="48" height="48" rx="14" fill="#2B3440"/>
+          <rect x="13" y="11" width="22" height="22" rx="7.5" fill="#9FD3EC"/>
+          <circle cx="19.6" cy="20.4" r="1.9" fill="#2B3440"/>
+          <circle cx="28.4" cy="20.4" r="1.9" fill="#2B3440"/>
+          <ellipse cx="17.4" cy="24.6" rx="2" ry="1.3" fill="#F6AFC3" opacity=".95"/>
+          <ellipse cx="30.6" cy="24.6" rx="2" ry="1.3" fill="#F6AFC3" opacity=".95"/>
+          <path d="M21.6 24.2c1.3 1.4 3.5 1.4 4.8 0" stroke="#2B3440" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        </svg>
+      </span>
+      <div class="brand-text">
+        <h1>Mingki Office</h1>
+        <p>밍끼프로 본부 · 4개 파트 가동 중</p>
       </div>
     </div>
-    <div class="badges">
-      <span class="badge badge-sage"><i aria-hidden="true">●</i> 4개 방 가동</span>
-      <span class="badge badge-sky"><i aria-hidden="true">●</i> 망두 &amp; 밍끼 ON</span>
-      <span class="badge badge-pink" id="todayBadge">오늘</span>
-    </div>
+    <span class="live" aria-label="실시간 가동 중">
+      <span class="live-dot" aria-hidden="true"></span>LIVE
+    </span>
   </header>
 
   <nav class="tabs" role="tablist" aria-label="밍끼 오피스 메뉴">
-    <button class="tab is-active" role="tab" id="tab-map" aria-selected="true" aria-controls="panel-map" data-tab="map"><span class="tab-emoji" aria-hidden="true">🗺️</span>오피스 맵</button>
-    <button class="tab" role="tab" id="tab-board" aria-selected="false" aria-controls="panel-board" data-tab="board"><span class="tab-emoji" aria-hidden="true">📋</span>프로젝트 보드</button>
-    <button class="tab" role="tab" id="tab-links" aria-selected="false" aria-controls="panel-links" data-tab="links"><span class="tab-emoji" aria-hidden="true">🔗</span>바로가기</button>
-    <button class="tab" role="tab" id="tab-memo" aria-selected="false" aria-controls="panel-memo" data-tab="memo"><span class="tab-emoji" aria-hidden="true">📝</span>메모장</button>
+    <button class="tab is-active" role="tab" id="tab-office" aria-selected="true" aria-controls="panel-office" data-tab="office">오피스</button>
+    <button class="tab" role="tab" id="tab-meeting" aria-selected="false" aria-controls="panel-meeting" data-tab="meeting">회의실</button>
+    <button class="tab" role="tab" id="tab-work" aria-selected="false" aria-controls="panel-work" data-tab="work">작업실</button>
+    <button class="tab" role="tab" id="tab-status" aria-selected="false" aria-controls="panel-status" data-tab="status">현황</button>
+    <button class="tab" role="tab" id="tab-memo" aria-selected="false" aria-controls="panel-memo" data-tab="memo">메모</button>
   </nav>
 
   <main>
 
-    <!-- ─────────── 1. 오피스 맵 ─────────── -->
-    <section class="panel is-active" id="panel-map" role="tabpanel" aria-labelledby="tab-map">
-      <div class="panel-intro">
-        <h2>오늘의 오피스</h2>
-        <p>방을 누르면 안을 들여다볼 수 있어요. 망두와 밍끼를 콕 찔러보세요.</p>
-      </div>
+    <!-- ─────────── 1. 오피스 ─────────── -->
+    <section class="panel is-active" id="panel-office" role="tabpanel" aria-labelledby="tab-office">
 
-      <div class="map-card">
-        <div class="map-stage" id="mapStage">
-          <picture class="map-pic">
-            <source srcset="assets/office-map.webp" type="image/webp">
-            <img class="map-img" src="assets/office-map.png" alt="밍끼 오피스 평면도 — 골프 스튜디오실, 블로그·인스타 작업실, 디자인·굿즈 공방, 오사카 &amp; 수다 라운지" draggable="false">
-          </picture>
+      <div class="office-layout">
 
-          <div class="room-layer">
-            <button class="room room--golf" data-room="golf" type="button" aria-label="골프 스튜디오실 열기">
-              <span class="room-no">1</span><span class="room-name">골프 스튜디오실</span><span class="room-name-short">골프</span>
-            </button>
-            <button class="room room--studio" data-room="studio" type="button" aria-label="블로그·인스타 작업실 열기">
-              <span class="room-no">2</span><span class="room-name">블로그·인스타 작업실</span><span class="room-name-short">작업실</span>
-            </button>
-            <button class="room room--craft" data-room="craft" type="button" aria-label="디자인·굿즈 공방 열기">
-              <span class="room-no">3</span><span class="room-name">디자인·굿즈 공방</span><span class="room-name-short">공방</span>
-            </button>
-            <button class="room room--lounge" data-room="lounge" type="button" aria-label="오사카 &amp; 수다 라운지 열기">
-              <span class="room-no">4</span><span class="room-name">오사카 &amp; 수다 라운지</span><span class="room-name-short">라운지</span>
-            </button>
+        <div class="office-head">
+          <div class="summary-card">
+            <span class="ws-badge">Workspace</span>
+            <h2>대표님, 4개 파트가 대기 중이에요</h2>
+            <p>공간이나 담당자를 탭하면 최근 진행 현황을 바로 볼 수 있어요.</p>
           </div>
 
-          <!-- 망두 -->
-          <button class="char char--mangdu" id="charMangdu" type="button" data-who="mangdu" aria-label="망두에게 말 걸기">
-            <span class="bubble" id="bubbleMangdu"><span class="who who--sky">망두</span><span class="say">안녕! 나는 망두야 ㅁ</span></span>
-            <span class="char-body">
-              <svg viewBox="0 0 64 78" aria-hidden="true">
-                <ellipse cx="32" cy="73" rx="15" ry="4" fill="#C9A98B" opacity=".28"/>
-                <rect x="19" y="54" width="7" height="16" rx="3.5" fill="#8CC7E2"/>
-                <rect x="38" y="54" width="7" height="16" rx="3.5" fill="#8CC7E2"/>
-                <ellipse cx="22.5" cy="70" rx="6" ry="3.4" fill="#6FB6D8"/>
-                <ellipse cx="41.5" cy="70" rx="6" ry="3.4" fill="#6FB6D8"/>
-                <rect x="6" y="8" width="52" height="48" rx="15" fill="#A9D6EA"/>
-                <rect x="6" y="8" width="52" height="48" rx="15" fill="none" stroke="#6FB6D8" stroke-width="3"/>
-                <rect x="17" y="18" width="30" height="29" rx="10" fill="#FFFDF9"/>
-                <circle cx="26" cy="30" r="2.7" fill="#4A423B"/>
-                <circle cx="38" cy="30" r="2.7" fill="#4A423B"/>
-                <ellipse cx="21.5" cy="36" rx="3.2" ry="2" fill="#F6C0CE" opacity=".9"/>
-                <ellipse cx="42.5" cy="36" rx="3.2" ry="2" fill="#F6C0CE" opacity=".9"/>
-                <path d="M28 36.5c1.6 2 6.4 2 8 0" stroke="#4A423B" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-                <path d="M16 14c2-3 6-4 9-3" stroke="#FFFDF9" stroke-width="2.6" stroke-linecap="round" opacity=".75" fill="none"/>
-              </svg>
-            </span>
-          </button>
-
-          <!-- 밍끼 -->
-          <button class="char char--mingki" id="charMingki" type="button" data-who="mingki" aria-label="밍끼에게 말 걸기">
-            <span class="bubble" id="bubbleMingki"><span class="who who--pink">밍끼</span><span class="say">레슨 갈 준비 중이야~</span></span>
-            <span class="char-body">
-              <svg viewBox="0 0 72 88" aria-hidden="true">
-                <ellipse cx="34" cy="84" rx="16" ry="4" fill="#C9A98B" opacity=".28"/>
-                <!-- 클럽 -->
-                <line x1="55" y1="44" x2="66" y2="80" stroke="#B7C6BF" stroke-width="2.2" stroke-linecap="round"/>
-                <path d="M64.5 80h6.5l-1.6 4.6h-5.4z" fill="#9FB3AB"/>
-                <!-- 다리 -->
-                <rect x="27" y="63" width="7" height="15" rx="3.5" fill="#F8DCC6"/>
-                <rect x="38" y="63" width="7" height="15" rx="3.5" fill="#F8DCC6"/>
-                <ellipse cx="30.5" cy="80" rx="6" ry="3.5" fill="#FFFDF9" stroke="#E6D8C9" stroke-width="1.1"/>
-                <ellipse cx="41.5" cy="80" rx="6" ry="3.5" fill="#FFFDF9" stroke="#E6D8C9" stroke-width="1.1"/>
-                <!-- 원피스 -->
-                <path d="M22 44c0-4 4-7 9-7h8c5 0 9 3 9 7l3 22H19z" fill="#A8C4B4"/>
-                <path d="M19 66h34l-1.6 4H20.6z" fill="#8FB0A0"/>
-                <circle cx="36" cy="55" r="3" fill="#FFFDF9" opacity=".85"/>
-                <!-- 팔 -->
-                <rect x="14" y="47" width="7" height="16" rx="3.5" fill="#F8DCC6" transform="rotate(12 17.5 55)"/>
-                <rect x="50" y="45" width="7" height="14" rx="3.5" fill="#F8DCC6" transform="rotate(-22 53.5 52)"/>
-                <!-- 머리 -->
-                <circle cx="36" cy="27" r="15" fill="#F8DCC6"/>
-                <path d="M21 26c0-9 7-15 15-15s15 6 15 15c-4-5-9-6-15-6s-11 1-15 6z" fill="#6B4A3A"/>
-                <path d="M21 27c-4 3-5 10-2 14 2 3 6 2 6-1z" fill="#6B4A3A"/>
-                <path d="M51 27c4 3 5 10 2 14-2 3-6 2-6-1z" fill="#6B4A3A"/>
-                <!-- 썬캡 -->
-                <path d="M21 21c0-8 6-13 15-13s15 5 15 13z" fill="#F6C9D5"/>
-                <path d="M20 21h32c2 0 3 2 2 3H21c-2 0-2-3-1-3z" fill="#EBA7BA"/>
-                <circle cx="36" cy="9" r="2.6" fill="#EBA7BA"/>
-                <!-- 얼굴 -->
-                <circle cx="30" cy="29" r="2.3" fill="#4A423B"/>
-                <circle cx="42" cy="29" r="2.3" fill="#4A423B"/>
-                <ellipse cx="26" cy="34" rx="3" ry="1.8" fill="#F6C0CE"/>
-                <ellipse cx="46" cy="34" rx="3" ry="1.8" fill="#F6C0CE"/>
-                <path d="M33 34.5c1.2 1.6 4.8 1.6 6 0" stroke="#4A423B" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-              </svg>
-            </span>
-          </button>
+          <div class="pill-row" role="group" aria-label="오피스 상태">
+            <button class="pill pill--motion is-on" id="motionToggle" type="button" aria-pressed="true">
+              <span class="pill-knob" aria-hidden="true"></span><span id="motionLabel">모션 ON</span>
+            </button>
+            <span class="pill pill--soft"><i class="pill-dot" aria-hidden="true"></i>가동 4파트</span>
+            <span class="pill pill--soft">망두 외 3파트</span>
+          </div>
         </div>
 
-        <div class="map-foot">
-          <p class="map-hint"><span aria-hidden="true">👆</span> 방 라벨을 누르면 상세, 캐릭터를 누르면 한마디</p>
-          <p class="map-now" id="mapNow">지금 망두는 라운지, 밍끼는 골프 스튜디오실에 있어요.</p>
-        </div>
-      </div>
+        <div class="office-map">
+          <div class="map-card">
+            <div class="map-stage is-motion" id="mapStage">
+              <picture class="map-pic">
+                <source srcset="assets/office-map.webp" type="image/webp">
+                <img class="map-img" id="mapImg" src="assets/office-map.png" alt="밍끼 오피스 3D 미니어처 — 지휘실, 골프 스튜디오, 블로그·클립실, 디자인·굿즈, 오사카 라운지" draggable="false">
+              </picture>
 
-      <div class="room-chips" id="roomChips">
-        <button class="room-chip" type="button" data-room="golf"><span aria-hidden="true">⛳</span> 골프 스튜디오실</button>
-        <button class="room-chip" type="button" data-room="studio"><span aria-hidden="true">🖥️</span> 작업실</button>
-        <button class="room-chip" type="button" data-room="craft"><span aria-hidden="true">🧵</span> 공방</button>
-        <button class="room-chip" type="button" data-room="lounge"><span aria-hidden="true">☕</span> 라운지</button>
+              <!-- 담당자 캐릭터 (이미지 위 투명 핫스팟) -->
+              <button class="mascot mascot--mangdu" id="mascotMangdu" type="button" aria-label="망두에게 말 걸기">
+                <span class="mascot-ring" aria-hidden="true"></span>
+              </button>
+              <button class="mascot mascot--mingki" id="mascotMingki" type="button" aria-label="밍끼에게 말 걸기">
+                <span class="mascot-ring" aria-hidden="true"></span>
+              </button>
+
+              <!-- 구역 핀 -->
+              <div class="pin-layer">
+                <button class="pin pin--hq" type="button" data-part="hq" aria-label="지휘실 열기"><i aria-hidden="true"></i>지휘실</button>
+                <button class="pin pin--golf" type="button" data-part="golf" aria-label="골프 스튜디오 열기"><i aria-hidden="true"></i>골프 스튜디오</button>
+                <button class="pin pin--blog" type="button" data-part="blog" aria-label="블로그·클립실 열기"><i aria-hidden="true"></i>블로그·클립실</button>
+                <button class="pin pin--design" type="button" data-part="design" aria-label="디자인·굿즈 열기"><i aria-hidden="true"></i>디자인·굿즈</button>
+                <button class="pin pin--lounge" type="button" data-part="lounge" aria-label="오사카 라운지 열기"><i aria-hidden="true"></i>오사카 라운지</button>
+              </div>
+
+              <div class="say-bubble" id="sayBubble" hidden>
+                <b id="sayWho">망두</b><span id="sayText">안녕!</span>
+              </div>
+            </div>
+
+            <div class="map-foot">
+              <p class="map-hint">핀을 누르면 상세, 망두·밍끼를 콕 찔러보세요</p>
+              <p class="map-now" id="mapNow">망두는 지휘실, 밍끼는 라운지에서 쉬는 중이에요.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="office-parts">
+          <div class="parts-head">
+            <h2>파트 현황</h2>
+            <span class="parts-count">5곳</span>
+          </div>
+          <ul class="part-list" id="partList"></ul>
+        </div>
+
       </div>
     </section>
 
-    <!-- ─────────── 2. 프로젝트 보드 ─────────── -->
-    <section class="panel" id="panel-board" role="tabpanel" aria-labelledby="tab-board" hidden>
+    <!-- ─────────── 2. 회의실 ─────────── -->
+    <section class="panel" id="panel-meeting" role="tabpanel" aria-labelledby="tab-meeting" hidden>
       <div class="panel-intro">
-        <h2>프로젝트 보드</h2>
+        <h2>회의실</h2>
+        <p>망두가 모아둔 오늘 안건이에요. 정해진 것부터 하나씩.</p>
+      </div>
+
+      <div class="agenda-card">
+        <div class="agenda-head">
+          <span class="ws-badge">Today's Agenda</span>
+          <span class="agenda-date" id="agendaDate"></span>
+        </div>
+        <ul class="agenda-list">
+          <li>
+            <span class="agenda-no">1</span>
+            <div class="agenda-body">
+              <strong>구디백 v2 소량 테스트, 할까 말까</strong>
+              <p>구성·단가표는 끝났어요. 만들기 전에 한 번 정하면 돼요.</p>
+            </div>
+            <span class="tag tag--wait">결정</span>
+          </li>
+          <li>
+            <span class="agenda-no">2</span>
+            <div class="agenda-body">
+              <strong>전자책 298쪽 · 이모티콘 · 툰 샘플 검토</strong>
+              <p>세 가지가 검토 대기로 쌓여 있어요. 오늘 하나만 봐도 좋아요.</p>
+            </div>
+            <span class="tag tag--wait">검토</span>
+          </li>
+          <li>
+            <span class="agenda-no">3</span>
+            <div class="agenda-body">
+              <strong>어프로치·유틸리티 글, 발행할까</strong>
+              <p>임시저장 상태로 대기 중이에요. 확인하면 바로 발행 준비할게요.</p>
+            </div>
+            <span class="tag tag--go">발행</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="parts-head parts-head--wide">
+        <h2>파트별 보고</h2>
+        <span class="parts-count">탭하면 상세</span>
+      </div>
+      <div class="report-list" id="reportList"></div>
+    </section>
+
+    <!-- ─────────── 3. 작업실 ─────────── -->
+    <section class="panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work" hidden>
+      <div class="panel-intro">
+        <h2>작업실</h2>
         <p>지금 실제로 굴러가고 있는 것들만 모았어요.</p>
       </div>
 
       <div class="board-meta">
-        <span class="board-count" id="boardCount">진행 중 6개</span>
+        <span class="board-count">진행 중 6개</span>
         <span class="board-date" id="boardDate"></span>
       </div>
 
@@ -201,7 +206,7 @@
 
         <article class="pcard pcard--pink">
           <header class="pcard-top">
-            <span class="pcard-emoji" aria-hidden="true">🧴</span>
+            <span class="pcard-emoji" aria-hidden="true">🌿</span>
             <div class="pcard-title">
               <h3>일상 블로그</h3>
               <p>blog.naver.com/myminjiday</p>
@@ -236,7 +241,7 @@
           </ul>
           <footer class="pcard-foot">
             <span class="tag">로열티</span>
-            <a class="mini-link" href="#panel-board" data-open="craft">공방 보기 →</a>
+            <a class="mini-link" href="#panel-office" data-open="design">공방 보기 →</a>
           </footer>
         </article>
 
@@ -256,7 +261,7 @@
           </ul>
           <footer class="pcard-foot">
             <span class="tag">v2</span>
-            <a class="mini-link" href="#panel-board" data-open="craft">공방 보기 →</a>
+            <a class="mini-link" href="#panel-office" data-open="design">공방 보기 →</a>
           </footer>
         </article>
 
@@ -275,7 +280,7 @@
           </ul>
           <footer class="pcard-foot">
             <span class="tag">특가 추적</span>
-            <a class="mini-link" href="#panel-board" data-open="lounge">라운지 보기 →</a>
+            <a class="mini-link" href="#panel-office" data-open="lounge">라운지 보기 →</a>
           </footer>
         </article>
 
@@ -295,18 +300,25 @@
           </ul>
           <footer class="pcard-foot">
             <span class="tag">3건</span>
-            <a class="mini-link" href="#panel-board" data-open="studio">작업실 보기 →</a>
+            <a class="mini-link" href="#panel-office" data-open="blog">작업실 보기 →</a>
           </footer>
         </article>
 
       </div>
     </section>
 
-    <!-- ─────────── 3. 바로가기 ─────────── -->
-    <section class="panel" id="panel-links" role="tabpanel" aria-labelledby="tab-links" hidden>
+    <!-- ─────────── 4. 현황 ─────────── -->
+    <section class="panel" id="panel-status" role="tabpanel" aria-labelledby="tab-status" hidden>
       <div class="panel-intro">
-        <h2>바로가기</h2>
-        <p>민지 님 채널로 바로 이동해요. 새 탭에서 열립니다.</p>
+        <h2>현황</h2>
+        <p>채널 숫자와 바로가기를 한 번에 봐요. 새 탭에서 열립니다.</p>
+      </div>
+
+      <div class="stat-strip">
+        <div class="stat"><strong>6</strong><span>발행한 글</span></div>
+        <div class="stat"><strong>2</strong><span>임시저장</span></div>
+        <div class="stat"><strong>2</strong><span>심사 대기</span></div>
+        <div class="stat"><strong id="statDday">D-103</strong><span>오사카</span></div>
       </div>
 
       <div class="links">
@@ -370,10 +382,10 @@
       <p class="links-note">레슨 문의는 오픈채팅이나 인스타 DM으로 이어지고 있어요.</p>
     </section>
 
-    <!-- ─────────── 4. 메모장 ─────────── -->
+    <!-- ─────────── 5. 메모 ─────────── -->
     <section class="panel" id="panel-memo" role="tabpanel" aria-labelledby="tab-memo" hidden>
       <div class="panel-intro">
-        <h2>메모장</h2>
+        <h2>메모</h2>
         <p>이 브라우저에만 저장돼요. 앱을 닫아도 남아 있어요.</p>
       </div>
 
@@ -381,7 +393,7 @@
 
         <div class="memo-card">
           <div class="memo-head">
-            <h3><span aria-hidden="true">✏️</span> 퀵 메모</h3>
+            <h3>퀵 메모</h3>
             <span class="save-state" id="memoState">자동 저장</span>
           </div>
           <textarea id="memoBox" class="memo-box" rows="8" placeholder="생각날 때 바로 적어두세요. 예) 다음 글 사진 후보, 레슨 때 알려줄 포인트, 사야 할 소품…" spellcheck="false"></textarea>
@@ -393,7 +405,7 @@
 
         <div class="memo-card">
           <div class="memo-head">
-            <h3><span aria-hidden="true">✔️</span> 오늘의 체크리스트</h3>
+            <h3>오늘의 체크리스트</h3>
             <span class="save-state" id="listState">0 / 0</span>
           </div>
 
@@ -422,21 +434,21 @@
   </main>
 
   <footer class="app-footer">
-    <span>밍끼 오피스 · 프로토타입</span>
+    <span>Mingki Office</span>
     <span class="dot" aria-hidden="true">·</span>
     <span>망두가 옆에서 대기 중 ㅁ</span>
   </footer>
 </div>
 
-<!-- 방 상세 시트 -->
+<!-- 파트 상세 시트 -->
 <div class="sheet-backdrop" id="sheetBackdrop" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
     <div class="sheet-grab" aria-hidden="true"></div>
     <header class="sheet-head">
-      <span class="sheet-emoji" id="sheetEmoji" aria-hidden="true">⛳</span>
-      <div>
-        <h3 id="sheetTitle">골프 스튜디오실</h3>
-        <p id="sheetSub">1번 방</p>
+      <span class="sheet-emoji" id="sheetEmoji" aria-hidden="true">🧸</span>
+      <div class="sheet-title-wrap">
+        <h3 id="sheetTitle">지휘실</h3>
+        <p id="sheetSub">망두 · 총괄</p>
       </div>
       <button class="sheet-close" id="sheetClose" type="button" aria-label="닫기">✕</button>
     </header>
