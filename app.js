@@ -134,7 +134,7 @@
       ],
       actions: [
         { type: 'link', label: '일상 블로그 ↗', href: 'https://blog.naver.com/myminjiday' },
-        { type: 'link', label: '네이버 클립 ↗', href: 'https://m.blog.naver.com/clip' }
+        { type: 'link', label: '네이버 클립 ↗', href: 'https://clip.naver.com/@mingkipro_' }
       ]
     },
     design: {
