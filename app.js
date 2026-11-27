@@ -415,6 +415,13 @@
     if (below) sayBubble.classList.add('is-below');
     sayBubble.style.setProperty('--bx', x + '%');
     sayBubble.style.setProperty('--by', (below ? cy + 13 : cy - 9) + '%');
+
+    // 말풍선이 화면 밖으로 밀리면 꼬리를 캐릭터 쪽으로 이동
+    const bw = sayBubble.offsetWidth || 1;
+    const centerPx = cx / 100 * stage.width;
+    const leftPx = x / 100 * stage.width - bw / 2;
+    const tail = Math.min(88, Math.max(12, (centerPx - leftPx) / bw * 100));
+    sayBubble.style.setProperty('--tail', tail + '%');
     sayBubble.style.animation = 'none';
     void sayBubble.offsetWidth;
     sayBubble.style.animation = '';

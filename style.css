@@ -474,7 +474,7 @@ main { min-height: 60vh; }
 .say-bubble::after {
   content: "";
   position: absolute;
-  left: 50%;
+  left: var(--tail, 50%);
   bottom: -5px;
   width: 9px; height: 9px;
   margin-left: -4.5px;
