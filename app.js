@@ -130,7 +130,7 @@
         '일상 블로그 4편 발행 — 겨울 보습템 · 175cm 데이트룩 · 의정부 · 대학로',
         '다음 맛집 회차 글감 준비 중',
         '클립 @mingkipro_ 연동',
-        '전자책 · 이모티콘 · 툰 샘플 검토 대기'
+        '전자책·툰 샘플 검토 대기 · 이모티콘 112컷 완성'
       ],
       actions: [
         { type: 'link', label: '일상 블로그 ↗', href: 'https://blog.naver.com/myminjiday' },
@@ -146,9 +146,10 @@
       statusType: 'wait',
       avatar: '🐻',
       desc: '파스텔 작업대와 미싱이 있는 공방. 미리캔버스 요소를 만들고, 직접 그린 캐릭터로 이모티콘을 뽑고, 구디백 샘플을 재보는 곳이에요.',
-      reportLead: '이모티콘 4종 샘플 6컷씩 완료 — 풀세트 대기',
+      reportLead: '이모티콘 4종 풀세트 112컷 완성 — 제출 준비',
       emoticons: true,
       items: [
+        '이모티콘 제출 준비 — OGQ 크리에이터 가입·정산 계좌 연결',
         '미리캔버스 손그림 20종 심사 대기 중 · 캐릭터 27종 제출 예정',
         '구디백 v2 구성 확정 — 볼마커 · 볼타월 · 티 · 파우치',
         '단가표 완료, 소량 테스트 결정 대기'
@@ -295,9 +296,9 @@
       const etSrc = $('#etList');
       if (p.emoticons && etSrc) {
         sheetEt.innerHTML =
-          '<div class="et-head"><strong>캐릭터 이모티콘 4종</strong><span>샘플 6컷씩 완료 · 풀세트 대기</span></div>' +
+          '<div class="et-head"><strong>캐릭터 이모티콘 4종</strong><span>4종 112컷 완성</span></div>' +
           '<ul class="et-list">' + etSrc.innerHTML + '</ul>' +
-          '<p class="et-note">상태 확인 후 채팅으로 “토끼 24컷 이어서 해줘”처럼 지시하면 바로 이어서 만들어요.</p>';
+          '<p class="et-note">토끼·모모 24컷, 루루·빼꼼이 32컷 전부 완성 — 시트와 제출용 파일은 채팅에서 보낸 그대로예요.</p>';
         sheetEt.hidden = false;
       } else {
         sheetEt.innerHTML = '';

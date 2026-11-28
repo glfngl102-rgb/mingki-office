@@ -950,6 +950,12 @@ main { min-height: 60vh; }
   white-space: nowrap;
 }
 .et-count b { color: var(--green-deep); font-weight: 900; }
+.et-count--full {
+  background: var(--green-tint);
+  border-color: rgba(74, 124, 96, .22);
+  color: var(--green-deep);
+}
+.et-count--full b { color: var(--green-deep); }
 
 .et-note {
   margin-top: 9px;
